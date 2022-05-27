@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import AdminPanel from './pages/adminPanel';
+import Dashboard from './pages/Dashboard/Dashboard';
+import Signup from "./pages/Signup/Signup"
 function App() {
   return (
-    <div>
-      <AdminPanel/>
-    </div>
+    
+      <Dashboard/>
+      // <Signup/>
+    
   );
 }
 

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&family=Montserrat:ital,wght@0,700;1,700&family=Roboto:wght@300&display=swap');
+.backgroundImage{
+    background-image: url("./Backgroundimage.png");
+    height: 100vh;
+  /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+  
+}
+.dash-desc{
+    margin:10rem 0rem 0rem 5rem 
+}
+.desc-head{
+    font-family: 'Montserrat', sans-serif;
+}
