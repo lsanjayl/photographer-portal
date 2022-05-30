@@ -3,7 +3,7 @@ const Navbar =()=>{
         <div>
         <div class="navbar ">
   <div class="flex-1">
-    <a className="text-3xl font-bold mx-4">LOGO</a>
+    <a className="text-3xl font-bold">LOGO</a>
   </div>
   <div class="flex-none">
     <ul class="menu menu-horizontal p-0">
