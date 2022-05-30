@@ -1,12 +1,30 @@
 import Navbar from "../../components/Navbar"
 import  "./Signup.css"
-import {useState} from "react"
+import {useState,useEffect} from "react"
+import {auth} from "../../services/config"
+import {signInWithEmailAndPassword,signOut,onAuthStateChanged} from "firebase/auth"
+import {useNavigate} from "react-router-dom"
 const Signup=()=>{
+    const navigate=useNavigate()
+    const [userr,setUserr]=useState("")
     const [user,setUser] = useState("client");
     const [email,setEmail]=useState("")
     const [pass,setPass]=useState("")
+    function login(email,password){
+        return signInWithEmailAndPassword(auth,email,password)
+    }
+    useEffect(()=>{
+        const unsubscribe= onAuthStateChanged(auth,(currentUser)=>{
+             setUserr(currentUser);
+         })
+         return ()=>{
+             unsubscribe();
+         }
+     },[])
     const handleSubmit=()=>{
         console.log(email,pass,user)
+        login(email,pass);
+        navigate("../Clientdashboard/Dashboard",{state:{value:userr}});
         setEmail("");
         setPass("");
     }
